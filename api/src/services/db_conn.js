@@ -39,6 +39,8 @@ class ORM {
 	}
 
 	addUser(name, email, password) {
+		console.log("-----");
+		console.log(this.Models);
 		this.Models.create({ name, email, password })
 			.then(user => {
 				console.log('User added successfully:', user.toJSON());
