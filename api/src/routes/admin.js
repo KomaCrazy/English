@@ -61,16 +61,19 @@ app.get('/add', (req, res) => {
 });
 
 app.get('/table', async (req, res) => {
-	let orm = new ORM();
-	let prams = {
-		table:req.query.tables,
-		field:{
-			th:"string",
-			en:"string",
+	let data =  {};
+	if (IsValid(req.query.tables)){
+		let orm = new ORM();
+		let prams = {
+			table:req.query.tables,
+			field:{
+				th:"string",
+				en:"string",
+			}
 		}
+		data = await orm.getData(prams);
 	}
-	let data = await orm.getData(prams);
-	console.log(data)
+
 	res.send(data);
 });
 

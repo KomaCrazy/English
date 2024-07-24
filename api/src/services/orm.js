@@ -77,8 +77,6 @@ class ORM {
 
 	async getData(prams) {
 		const { table } = prams;
-		console.log(table);
-	
 		const Model = this.defineModel("word_" + table, World)
 			const users = await Model.findAll();
 			return users;
