@@ -1,8 +1,7 @@
 const express = require('express');
 const app = express();
-const ORM = require('../services/db_conn');
-const ORM_X = require('../services/orm');
-
+const ORM = require('../services/orm');
+const { IsValid,SomeTinghLost } = require('../services/valid');
 
 
 
@@ -11,31 +10,47 @@ app.get('/', (req, res) => {
 });
 
 app.get('/create', (req, res) => {
-  res.send('Admin Create');
+	res.send('Admin Create');
 
-	let orm = new ORM_X();
-	// let orm = new ORM();
-	orm.createTable();
-	// orm.createTable();
+	const orm = new ORM();
 
-
-
-
+	if (IsValid(req.query.tables)){
+		let table = {
+			table:req.query.tables,
+			field:{
+				th:"string",
+				en:"string",
+			}
+		}	
+		orm.createTable(table);
+	}
 });
 
 app.get('/add', (req, res) => {
-	let orm = new ORM();
-	orm.addUser('John Doe', 'john.doe@example.com', 'password123');
+
+	if (IsValid(req.query.tables)){
+
+		const val = req.query
+		const orm = new ORM();
+
+		if (IsValid(val.en) && IsValid(val.th)){
+			let prams = {
+				table:val.tables,
+				en:val.en,
+				en:val.th,
+			}
+			orm.addWord(prams);
+		}else{
+			SomeTinghLost(val)
+		}
+	}
+	
 	res.send('Admin add');
 });
 
 app.get('/table', (req, res) => {
 	let orm = new ORM();
 	console.log(orm.getUsers());
-
-	// console.log(orm.addUser())
-	// orm.addUser('John Doe', 'john.doe@example.com', 'password123');
-	// console.log(db_c.box())
 	res.send('Admin add');
 });
 
