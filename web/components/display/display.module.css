@@ -1,0 +1,19 @@
+.display {
+    background: #f7f7f7;
+    border:1px solid #aeaeae;
+    border-radius: 3px;
+    width: 90%;
+    height: 400px;
+    text-align: center;
+    position: relative;
+    left: 5%;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+.main{
+    height: 50px;
+}
+
+.colume_2{
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+.colume_2 span{
+    border:1px solid #aeaeae;
+    width: 50%;
+}
+.main_title{
+    padding: 5px;
+    text-align: left;
+}
+
+.title{
+    font-size: 20px;
+}
