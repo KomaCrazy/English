@@ -6,7 +6,7 @@ async function getArtist() {
 }
 
 
-export default async function Page({}){
+export default async function Page({prams}){
 
   const words = await getArtist();
   console.log(words);
