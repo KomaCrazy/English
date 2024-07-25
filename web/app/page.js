@@ -13,7 +13,7 @@ export default async function Page({prams}){
 
   return (
     <div>
-       {<Display prams={words}></Display>}
+       {/* {<Display prams={words}></Display>} */}
     </div>
 
   )
