@@ -9,11 +9,24 @@
     left: 5%;
     text-align: center;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 
+.table{
+    width: 100%
+}
 
 
+.table_header_word{
+    /* background: yellow; */
+}
+
+
+.table_header_edit{
+    /* background-color: green; */
+    width: 20%;
+}
 
 
 

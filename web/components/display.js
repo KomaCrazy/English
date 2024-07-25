@@ -1,23 +1,25 @@
 import styles from './display/display.module.css'
 import DisplayHeader from './display/header'
-export default async function Display({prams}){
-    // console.log(prams.title)
+import {upperLetter} from './generals'
 
+import Tables from './tables'
+
+
+
+export default async function Display({prams}){
     return (
         <div className={styles.display}>
             {
                 <DisplayHeader prams={prams.title}></DisplayHeader>
             }
+            {
+                <Tables></Tables>
+            }
 
-            {/* <ul>
-                {prams.map((val,i) => (
-                    <li key={i}>
-                    {val.en}
-                    {val.th}
-                    </li>
-                ))}
-            </ul> */}
-            
+
+
+
+
          </div>
     )
 }

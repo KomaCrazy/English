@@ -1,5 +1,4 @@
 .main{
-    height: 50px;
 }
 
 .colume_2{
@@ -12,10 +11,18 @@
     width: 50%;
 }
 .main_title{
-    padding: 5px;
+    padding: 10px;
     text-align: left;
 }
 
 .title{
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.tools{
+    padding: 10px;
+    display: flex;
+}
+.tools span{
+    width: 50%;
 }

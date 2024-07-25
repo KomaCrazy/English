@@ -1,6 +1,9 @@
 import style_header from './header.module.css'
 import {upperLetter} from '../generals'
 
+import Search from './search'
+
+
 
 
 export default function Headers({prams}){
@@ -9,10 +12,14 @@ export default function Headers({prams}){
             <div className={style_header.main_title}>
                 <span className={style_header.title}>{upperLetter(prams)}</span>
             </div>
-            {/* <div className={style_header.colume_2}>
-                <span className={style_header.left}>EN</span>
-                <span className={style_header.right}>TH</span>
-            </div> */}
+            <div className={style_header.tools}>
+                <span></span>
+                <span className={style_header.main_search}>
+                    {<Search></Search>}
+                </span>
+            </div>
+        <hr></hr>
+
         </div>
     )
 }

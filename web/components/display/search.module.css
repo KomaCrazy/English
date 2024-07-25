@@ -1,0 +1,40 @@
+.main{
+    border-radius: 3px;
+    padding: 10px;
+    border-radius: 20px;
+    background: white;
+    color: #aeaeae;
+    cursor: pointer;
+    display: flex;
+    float: right;
+    border:1px solid white;
+
+}
+
+.main:hover{
+    border:1px solid #aeaeae;
+}
+
+.main:hover .icon_search{
+    color:black
+}
+
+.icon_search{
+    background: white;
+    padding-right: 5px;
+    border:0px;
+    background: none;
+    overflow: hidden;
+}
+
+
+
+.input_search,.input_search:focus{
+    border:0px;
+    outline:none!important;
+}
+
+.input_search{
+    width: 120px;
+    background: white;
+}
